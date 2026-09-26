@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — صدقة (Sidq)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f3ec;
+    --ink:#211f1a;
+    --muted:#726d61;
+    --accent:#154f46;
+    --accent-soft:#dde7e3;
+    --gold:#a9812f;
+    --rule:#e2ddcf;
+    --danger:#8a3324;
+    --max:640px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:56px 24px 96px;}
+  header.top{max-width:var(--max);margin:0 auto;padding:40px 24px 0;}
+  .mark{width:34px;height:34px;color:var(--accent);}
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:2rem;
+    line-height:1.2;
+    margin:18px 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .sub{color:var(--muted);font-size:0.98rem;margin:0 0 28px;}
+  nav.langs{display:flex;gap:8px;margin:22px 0 0;}
+  nav.langs a{
+    text-decoration:none;
+    font-size:0.85rem;
+    color:var(--accent);
+    border:1px solid var(--accent-soft);
+    background:var(--accent-soft);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  nav.langs a:hover{background:#cfe0d9;}
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:1.28rem;
+    margin:2.2em 0 0.6em;
+    color:var(--accent);
+    border-bottom:1px solid var(--rule);
+    padding-bottom:0.35em;
+  }
+  h3{font-size:1.02rem;margin:1.4em 0 0.3em;}
+  p{margin:0 0 1.1em;}
+  p.lede{font-size:1.06rem;color:#3a3830;}
+  details{
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:0 0 10px;
+  }
+  details summary{cursor:pointer;font-weight:600;}
+  details p{margin:10px 0 0;color:#3a3830;}
+  form{margin-top:8px;}
+  .field{margin-bottom:16px;}
+  label{display:block;font-size:0.88rem;font-weight:600;margin-bottom:6px;}
+  input[type="text"], input[type="email"], textarea, select{
+    width:100%;
+    padding:11px 13px;
+    font-size:1rem;
+    font-family:inherit;
+    border:1px solid var(--rule);
+    border-radius:8px;
+    background:#fff;
+    color:var(--ink);
+  }
+  textarea{min-height:120px;resize:vertical;}
+  input:focus, textarea:focus, select:focus{outline:2px solid var(--accent);outline-offset:1px;}
+  .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  button.submit{
+    appearance:none;
+    border:none;
+    background:var(--accent);
+    color:#fff;
+    font-size:1rem;
+    font-weight:600;
+    padding:12px 22px;
+    border-radius:999px;
+    cursor:pointer;
+  }
+  button.submit:disabled{opacity:0.6;cursor:default;}
+  button.submit:hover:not(:disabled){background:#0f3f38;}
+  .status{margin-top:12px;font-size:0.92rem;min-height:1.2em;}
+  .status.ok{color:var(--accent);}
+  .status.err{color:var(--danger);}
+  .direct{
+    margin-top:10px;
+    font-size:0.9rem;
+    color:var(--muted);
+  }
+  .direct a{color:var(--accent);}
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    margin:64px 0;color:var(--gold);
+  }
+  .divider .line{flex:1;height:1px;background:var(--rule);}
+  .divider svg{width:20px;height:20px;flex-shrink:0;}
+  section[dir="rtl"]{
+    font-family:'Tajawal',-apple-system,"Segoe UI",Tahoma,sans-serif;
+    text-align:right;
+  }
+  section[dir="rtl"] h2{font-family:'Amiri',Georgia,serif;font-size:1.42rem;}
+  section[dir="rtl"] label{text-align:right;}
+  footer{
+    max-width:var(--max);margin:0 auto;padding:0 24px 64px;
+    color:var(--muted);font-size:0.85rem;text-align:center;
+    border-top:1px solid var(--rule);padding-top:28px;
+  }
+  footer a{color:var(--accent);margin:0 6px;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M50 4 L61 39 L98 39 L68 60 L79 95 L50 74 L21 95 L32 60 L2 39 L39 39 Z"
+          stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  </svg>
+  <h1>Support — صدقة (Sidq)</h1>
+  <p class="sub">Get help with the app, or send us a message directly.</p>
+  <nav class="langs">
+    <a href="#en">English</a>
+    <a href="#ar">العربية</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+<section id="en" lang="en">
+  <p class="lede">Having trouble with Sidq, or just want to reach out? Check the common questions below, or use the form to send us a message — it goes straight to our inbox.</p>
+
+  <h2>Common questions</h2>
+
+  <details>
+    <summary>Prayer times or the Qibla direction look wrong</summary>
+    <p>Both are calculated from your device's location. Make sure Sidq has location permission enabled in your device's Settings, that your phone's location/GPS service is turned on, and that you have a clear view of the sky if you're indoors. Restarting the app after enabling permission usually fixes it.</p>
+  </details>
+
+  <details>
+    <summary>Recitation audio won't play</summary>
+    <p>Recitations are streamed from external audio servers rather than stored in the app, so you'll need an active internet connection to play them. If one reciter or Surah won't load, try another — the source server may be temporarily busy.</p>
+  </details>
+
+  <details>
+    <summary>I'm not getting Azkar or prayer reminders</summary>
+    <p>Check that notifications are allowed for Sidq in your device's Settings. On some Android phones, battery-optimization settings can stop scheduled reminders from firing — look for an option like "unrestricted battery usage" or "allow background activity" for the app.</p>
+  </details>
+
+  <details>
+    <summary>I found a bug or have a feature request</summary>
+    <p>We'd love to hear it — please use the form below with as much detail as you can (what you were doing, what you expected, and what happened instead).</p>
+  </details>
+
+  <h2>Send us a message</h2>
+  <form id="form-en" novalidate>
+    <div class="field">
+      <label for="name-en">Name</label>
+      <input type="text" id="name-en" name="name" required>
+    </div>
+    <div class="field">
+      <label for="email-en">Email</label>
+      <input type="email" id="email-en" name="email" required>
+    </div>
+    <div class="field">
+      <label for="subject-en">Subject</label>
+      <select id="subject-en" name="subject">
+        <option>General question</option>
+        <option>Bug report</option>
+        <option>Feature request</option>
+        <option>Prayer times / Qibla issue</option>
+        <option>Audio / recitation issue</option>
+        <option>Notifications issue</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="message-en">Message</label>
+      <textarea id="message-en" name="message" required></textarea>
+    </div>
+    <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+    <button class="submit" type="submit">Send message</button>
+    <p class="status" id="status-en" role="status"></p>
+  </form>
+  <p class="direct">Prefer email? Write to us directly at <a href="mailto:admin@echovision.ae">admin@echovision.ae</a>.</p>
+</section>
+
+<div class="divider">
+  <span class="line"></span>
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+  <span class="line"></span>
+</div>
+
+<section id="ar" lang="ar" dir="rtl">
+  <p class="lede">تواجه مشكلة في تطبيق صدقة، أو تريد التواصل معنا؟ اطّلع على الأسئلة الشائعة أدناه، أو استخدم النموذج لإرسال رسالة تصلنا مباشرة.</p>
+
+  <h2>أسئلة شائعة</h2>
+
+  <details>
+    <summary>مواقيت الصلاة أو اتجاه القبلة تبدو غير صحيحة</summary>
+    <p>يعتمد كلاهما على موقع جهازك. تأكد من منح صدقة إذن الوصول إلى الموقع من إعدادات جهازك، ومن تفعيل خدمة الموقع (GPS)، ومن وجودك في مكان مفتوح إن كنت بالداخل. عادةً ما تُحل المشكلة بإعادة تشغيل التطبيق بعد منح الإذن.</p>
+  </details>
+
+  <details>
+    <summary>التلاوة الصوتية لا تعمل</summary>
+    <p>يتم بث التلاوات من خوادم صوتية خارجية بدلًا من تخزينها داخل التطبيق، لذا تحتاج إلى اتصال إنترنت فعّال لتشغيلها. إذا لم تعمل قراءة أو سورة معينة، جرّب قارئًا آخر — فقد يكون الخادم المصدر مشغولًا مؤقتًا.</p>
+  </details>
+
+  <details>
+    <summary>لا تصلني تذكيرات الأذكار أو الصلاة</summary>
+    <p>تأكد من السماح بالإشعارات لتطبيق صدقة من إعدادات جهازك. في بعض هواتف أندرويد، قد تمنع إعدادات توفير البطارية التذكيرات المجدولة من العمل — ابحث عن خيار مثل "استخدام غير مقيّد للبطارية" أو "السماح بالنشاط في الخلفية" للتطبيق.</p>
+  </details>
+
+  <details>
+    <summary>وجدت خطأً أو لدي اقتراح لميزة جديدة</summary>
+    <p>يسعدنا سماع ذلك — يرجى استخدام النموذج أدناه مع أكبر قدر ممكن من التفاصيل (ماذا كنت تفعل، وما الذي توقعته، وما الذي حدث فعليًا).</p>
+  </details>
+
+  <h2>أرسل لنا رسالة</h2>
+  <form id="form-ar" novalidate>
+    <div class="field">
+      <label for="name-ar">الاسم</label>
+      <input type="text" id="name-ar" name="name" required>
+    </div>
+    <div class="field">
+      <label for="email-ar">البريد الإلكتروني</label>
+      <input type="email" id="email-ar" name="email" dir="ltr" required>
+    </div>
+    <div class="field">
+      <label for="subject-ar">الموضوع</label>
+      <select id="subject-ar" name="subject">
+        <option>سؤال عام</option>
+        <option>الإبلاغ عن خطأ</option>
+        <option>اقتراح ميزة جديدة</option>
+        <option>مشكلة في مواقيت الصلاة / القبلة</option>
+        <option>مشكلة في الصوت / التلاوة</option>
+        <option>مشكلة في الإشعارات</option>
+        <option>أخرى</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="message-ar">الرسالة</label>
+      <textarea id="message-ar" name="message" required></textarea>
+    </div>
+    <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+    <button class="submit" type="submit">إرسال الرسالة</button>
+    <p class="status" id="status-ar" role="status"></p>
+  </form>
+  <p class="direct">تفضّل التواصل عبر البريد مباشرة؟ راسلنا على <a href="mailto:admin@echovision.ae">admin@echovision.ae</a></p>
+</section>
+
+</div>
+
+<footer>
+  Sidq (صدقة) — Echovision · <a href="mailto:admin@echovision.ae">admin@echovision.ae</a> · <a href="index.html">Privacy Policy</a>
+</footer>
+
+<script>
+(function(){
+  var ENDPOINT = "https://formsubmit.co/ajax/admin@echovision.ae";
+
+  function wireForm(formId, statusId, sentMsg, errMsg) {
+    var form = document.getElementById(formId);
+    var status = document.getElementById(statusId);
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Honeypot: if this hidden field got filled, it's a bot — silently ignore.
+      var honey = form.querySelector('[name="_honey"]');
+      if (honey && honey.value) return;
+
+      var btn = form.querySelector("button.submit");
+      btn.disabled = true;
+      status.className = "status";
+      status.textContent = "…";
+
+      var data = new FormData(form);
+      data.append("_subject", "New Sidq support message");
+      data.append("_template", "table");
+      data.append("_captcha", "false");
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: data
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Request failed");
+        return res.json();
+      })
+      .then(function () {
+        status.className = "status ok";
+        status.textContent = sentMsg;
+        form.reset();
+      })
+      .catch(function () {
+        status.className = "status err";
+        status.textContent = errMsg;
+      })
+      .finally(function () {
+        btn.disabled = false;
+      });
+    });
+  }
+
+  wireForm(
+    "form-en", "status-en",
+    "Message sent — we'll get back to you soon.",
+    "Something went wrong. Please try again, or email admin@echovision.ae directly."
+  );
+  wireForm(
+    "form-ar", "status-ar",
+    "تم إرسال رسالتك — سنرد عليك قريبًا.",
+    "حدث خطأ ما. حاول مرة أخرى، أو راسلنا مباشرة على admin@echovision.ae"
+  );
+})();
+</script>
+
+</body>
+</html>
